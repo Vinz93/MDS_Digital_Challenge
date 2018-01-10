@@ -12,11 +12,9 @@ export default {
   },
   create: {
     body: {
-      title: Joi.string().required(),
-      content: Joi.string().required(),
-      image: Joi.string(),
-      categories: Joi.array().items(Joi.string()),
-      author: Joi.objectId().required(),
+      name: Joi.string().required(),
+      description: Joi.string().required(),
+      img: Joi.string(),
     },
   },
 };

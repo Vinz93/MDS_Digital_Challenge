@@ -3,8 +3,8 @@ import validate from 'express-validation';
 
 import Book from '../controllers/book';
 import bookValidator from '../services/param_validations/book';
-// import * as Post from '../controllers/post';
-// import postValidator from '../services/param_validations/post';
+import * as Category from '../controllers/category';
+import categoryValidator from '../services/param_validations/category';
 import { catchErrors } from '../helpers/errors';
 const router = express.Router(); // eslint-disable-line new-cap
 
@@ -16,8 +16,8 @@ router.route('/books')
   .get(validate(bookValidator.readAll), catchErrors(Book.readAll))
   .post(validate(bookValidator.create), catchErrors(Book.create));
 
-// router.route('/posts')
-//   .get(validate(postValidator.readAll), catchErrors(Post.readAll))
-//   .post(validate(postValidator.create), catchErrors(Post.create));
+router.route('/categories')
+  .get(validate(categoryValidator.readAll), catchErrors(Category.readAll))
+  .post(validate(categoryValidator.create), catchErrors(Category.create));
 
 export default router;

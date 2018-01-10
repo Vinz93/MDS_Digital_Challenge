@@ -52,4 +52,4 @@ const categorySchema = new Schema({
 categorySchema.plugin(paginate);
 categorySchema.plugin(fieldRemover, '__v');
 
-export default mongoose.model('Post', categorySchema);
+export default mongoose.model('Category', categorySchema);
