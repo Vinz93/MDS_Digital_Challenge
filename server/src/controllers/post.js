@@ -5,30 +5,6 @@ import { APIError } from '../helpers/errors';
 import Post from '../models/post';
 import User from '../models/user';
 
-/**
- * @swagger
- * /posts:
- *   get:
- *     tags:
- *      - Posts
- *     description: Show all posts
- *     produces:
- *       - application/json
- *     parameters:
- *       - name: limit
- *         description: pagination limit.
- *         in: query
- *         required: false
- *         type: string
- *       - name: offset
- *         description: pagination offset.
- *         in: query
- *         required: false
- *         type: string
- *     responses:
- *       200:
- *         description: return an array of posts
- */
 
 export const readAll = async (req, res) => {
   const offset = paginate.offset(req.query.offset);
@@ -47,38 +23,6 @@ export const readAll = async (req, res) => {
   res.json(posts);
 };
 
-/**
- * @swagger
- * /posts:
- *   post:
- *     tags:
- *      - Posts
- *     description: Create posts
- *     produces:
- *       - application/json
- *     parameters:
- *       - name: post
- *         description: post object.
- *         in: body
- *         required: true
- *         schema:
- *           $ref: '#/definitions/Post'
- *     responses:
- *       200:
- *         description: Successfully created
- *         schema:
- *           allOf:
- *              - $ref: '#/definitions/Post'
- *              - properties:
- *                  id:
- *                    type: string
- *                  createdAt:
- *                    type: string
- *                    format: date-time
- *                  updatedAt:
- *                    type: string
- *                    format: date-time
- */
 
 export const create = async (req, res) => {
   const user = await User.findById(req.body.author);

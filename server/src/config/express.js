@@ -4,7 +4,6 @@ import morgan from 'morgan';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import methodOverride from 'method-override';
-import nodemailer from 'nodemailer';
 import swaggerDoc from 'swagger-jsdoc';
 import swaggerTools from 'swagger-tools';
 
@@ -58,7 +57,6 @@ app.use(errorMessages);
 app.use(errorResponse);
 
 app.locals.config = appConfig;
-app.locals.transport = nodemailer.createTransport(config.mailer);
 
 
 export default app;

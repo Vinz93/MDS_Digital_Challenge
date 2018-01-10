@@ -7,7 +7,7 @@ const Schema = mongoose.Schema;
 /**
  * @swagger
  * definition:
- *   Post:
+ *   Category:
  *     properties:
  *       title:
  *         type: string
@@ -27,7 +27,7 @@ const Schema = mongoose.Schema;
  *       - author
  */
 
-const postSchema = new Schema({
+const categorySchema = new Schema({
   title: {
     type: String,
     required: true,
@@ -49,7 +49,7 @@ const postSchema = new Schema({
   },
 });
 
-postSchema.plugin(paginate);
-postSchema.plugin(fieldRemover, '__v');
+categorySchema.plugin(paginate);
+categorySchema.plugin(fieldRemover, '__v');
 
-export default mongoose.model('Post', postSchema);
+export default mongoose.model('Post', categorySchema);
