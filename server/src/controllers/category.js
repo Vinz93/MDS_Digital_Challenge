@@ -44,7 +44,7 @@ export const readAll = async (req, res) => {
     offset,
     limit,
   });
-  res.json(categories);
+  res.status(httpStatus.OK).json(categories);
 };
 
 /**
@@ -81,5 +81,5 @@ export const readAll = async (req, res) => {
  */
 export const create = async (req, res) => {
   const category = await Category.create(req.body);
-  res.json(category);
+  res.status(httpStatus.CREATED).json(category);
 };

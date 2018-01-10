@@ -49,7 +49,7 @@ const BookController = {
       offset,
       limit,
     });
-    res.json(books);
+    res.status(httpStatus.OK).json(books);
   },
 
   /**
@@ -86,7 +86,7 @@ const BookController = {
    */
   async create(req, res) {
     const newBook = await Book.create(req.body);
-    return res.json(newBook);
+    return res..status(httpStatus.CREATED).json(newBook);
   },
 
 
