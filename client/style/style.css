@@ -1,0 +1,33 @@
+h2, footer {
+  margin: 0;
+  text-align: center;
+  padding: 10px;
+}
+
+.books-list {
+  margin: 40px 70px;
+}
+
+.book {
+  border: 3px solid;
+  margin: 10px 0;
+}
+
+.book img {
+  width: 120px;
+  height: 180px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.book p {
+ display: inline-block;
+}
+ .Select {
+   width: 300px;
+   display: inline-block;
+   margin-left: 100px;
+ }
+
+.filter-container {
+  text-align: center;
+}

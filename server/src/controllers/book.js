@@ -86,7 +86,7 @@ const BookController = {
    */
   async create(req, res) {
     const newBook = await Book.create(req.body);
-    return res..status(httpStatus.CREATED).json(newBook);
+    return res.status(httpStatus.CREATED).json(newBook);
   },
 
 

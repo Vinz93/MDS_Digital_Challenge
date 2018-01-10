@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"mds-digital.books"},{"v":1,"unique":true,"key":{"isbn":1},"name":"isbn_1","ns":"mds-digital.books","background":true}]}
