@@ -1,5 +1,11 @@
 ## MDS_Digital Books Challenge
 Aplicacion realizada con Express, MongoDD, React y Redux.
+
+## Uso
+Bajar repositorio
+```
+git clone git@github.com:Vinz93/MDS_Digital_Challenge.git
+```
 ### Servidor
 Instalar las dependencias 
 ```
