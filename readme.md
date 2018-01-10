@@ -14,11 +14,9 @@ cd MDS_Digital/server
 yarn install
 ``` 
 #### Comandos
-| Script       | description          |
-| ------------- |:-------------:| -----:|
-| `yarn dev`      | Inicia el servidor | 
-| `yarn build`      | Construye la aplicacion en ./dist      | 
-| `yarn start` | Inicia en modo producion      | 
+`yarn dev`    Inicia el servidor
+`yarn build`  Construye la aplicacion en ./dist    
+`yarn start`  Inicia en modo producion    
 #### Notas
 - Debe haber iniciado mongoDB antes de iniciar el servidor
 - Documentacion del **API** `http://localhost:3000/docs/#/`
@@ -34,9 +32,7 @@ cd MDS_Digital/client
 yarn install
 ``` 
 #### Comandos
-| Script       | description          |
-| ------------- |:-------------:| -----:|
-| `yarn start`      | Inicia | 
+`yarn start`      | Inicia el cliente
 
 
 ## Notas 
