@@ -9,43 +9,28 @@ const Schema = mongoose.Schema;
  * definition:
  *   Category:
  *     properties:
- *       title:
+ *       name:
  *         type: string
- *       content:
+ *       description:
  *         type: string
- *       image:
- *         type: string
- *       categories:
- *         type: array
- *         items:
- *           type: string
- *       author:
+ *       img:
  *         type: string
  *     required:
- *       - title
- *       - content
- *       - author
+ *       - name
+ *       - description
  */
 
 const categorySchema = new Schema({
-  title: {
+  name: {
     type: String,
     required: true,
+    unique: 'the name of the category its already taken',
   },
-  content: {
-    type: String,
-    required: true,
-  },
-  image: {
+  description: {
     type: String,
   },
-  categories: [
-    { type: String },
-  ],
-  author: {
-    type: Schema.Types.ObjectId,
-    required: true,
-    ref: 'User',
+  img: {
+    type: String,
   },
 });
 

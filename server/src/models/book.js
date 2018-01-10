@@ -11,13 +11,17 @@ const Schema = mongoose.Schema;
  *   Book:
  *     properties:
  *       isbn:
- *         type: number
+ *         type: string
  *       name:
  *         type: string
  *       description:
  *         type: string
  *       img:
  *         type: string
+ *       categories:
+ *         type: array
+ *         items:
+ *          type: string
  *     required:
  *       - isbn
  *       - name
@@ -31,10 +35,9 @@ const BookSchema = new Schema({
     required: true,
   },
   isbn: {
-    type: Number,
+    type: String,
     required: true,
     unique: 'the isbn is already taken',
-    lenght: 10,
   },
   description: {
     type: String,
@@ -44,6 +47,7 @@ const BookSchema = new Schema({
     type: String,
     required: true,
   },
+  categories : [{ type: Schema.Types.ObjectId, ref: 'Category' }]
 
 }, {
   timestamps: true,

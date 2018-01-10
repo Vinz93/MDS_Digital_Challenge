@@ -39,7 +39,7 @@ const BookController = {
     const offset = paginate.offset(req.query.offset);
     const limit = paginate.limit(req.query.limit);
 
-    const find = req.query.find || {};
+    const find = req.query.find === undefined ? {} : {categories: {$in: [req.query.find]}};
     const sort = req.query.sort || {
       createdAt: 1,
     };

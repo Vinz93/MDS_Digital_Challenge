@@ -49,7 +49,7 @@ export const readAll = async (req, res) => {
 
 /**
  * @swagger
- * /books:
+ * /categories:
  *   post:
  *     tags:
  *      - Category

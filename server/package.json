@@ -1,7 +1,7 @@
 {
   "name": "node-redux",
   "version": "1.0.0",
-  "description": "template for Node, Mongo, React, Redux apps",
+  "description": "MDS Challenge",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec babel-node src/index.js",

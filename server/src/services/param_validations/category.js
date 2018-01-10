@@ -13,7 +13,7 @@ export default {
   create: {
     body: {
       name: Joi.string().required(),
-      description: Joi.string().required(),
+      description: Joi.string(),
       img: Joi.string(),
     },
   },

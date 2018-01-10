@@ -8,7 +8,7 @@ export default {
     query: {
       offset: Joi.number().integer(),
       limit: Joi.number().integer(),
-      category: Joi.string(),
+      find: Joi.string(),
       q: Joi.string(),
     },
   },
@@ -19,6 +19,7 @@ export default {
       description: Joi.string().required(),
       img: Joi.string(),
       isbn: Joi.number().integer(),
+      categories: Joi.array().items(Joi.string()),
     },
   },
 
